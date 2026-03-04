@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ShoppingCart, Heart, Search } from "lucide-react";
+import { Heart, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Header() {
@@ -82,18 +82,6 @@ export default function Header() {
                         aria-label="Wishlist"
                     >
                         <Heart size={20} strokeWidth={2} />
-                    </button>
-                    <button
-                        className={cn(
-                            "relative transition-colors duration-200 hover:text-accent",
-                            isScrolled ? "text-foreground" : "text-white"
-                        )}
-                        aria-label="Cart"
-                    >
-                        <ShoppingCart size={20} strokeWidth={2} />
-                        <span className="absolute -top-2 -right-2 bg-accent text-accent-foreground text-[10px] font-bold h-4 w-4 rounded-full flex items-center justify-center">
-                            0
-                        </span>
                     </button>
                 </div>
             </div>
